@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input, button {
+    border: none;
+    background: none;
+    text-align: center; 
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+.input-bet:hover { border: 1px solid lightskyblue; }
+.input-bet:focus { border: 1px solid black; }
+.input-bet::placeholder { font-family: Lato; font-size: 18px;}
+.input-bet {
+    position: absolute;
+    outline: none;
+
+    width: 25%;
+    height: 5%;
+
+    left: 42.3%;
+    top: 56%;
+    padding-left: 10px;
+    border-radius: 5px;
+
+    text-align: center;
+    font-size: 18px;
+    font-family: Lato;
+    background: white;
+    color: #555;
+    border: 1px solid #555;
+    transform: translateX(-50%);
+}
+
+button {cursor: pointer;}
+
+body {
+    background-image: linear-gradient(#3e141466, #3e141466), url(back.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 600;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper {
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dfdfdf;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.btn-rll-under, .btn-rll-over, .btn-bet{
+    position: absolute;
+    
+    width: 200px;
+    right: 21%;
+    
+    transform: translateX(-50%);
+    transition: background-color 0.3s, color 0.3s;
+    
+    font-family: Lato;
+    font-weight: 300;
+    font-size: 23px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #555;
+}
+
+.btn-rll-under:hover, .btn-rll-over:hover { font-weight: 600; }
+.btn-rll-under:hover i, .btn-rll-over:hover i { margin-right: 15px; }
+
+.btn-rll-under {top: 36%;}
+.btn-rll-over {top: 22%;}
+
+.btn-bet  {
+    width: 10%;
+    top: 56%;
+    left: 60.5%;
+    
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: #EB4D4D;
+    transition: 0.3s ease;
+}
+
+.btn-bet:hover {letter-spacing: 5px; padding-left: 3px;}
+
+i {
+    display: inline-block;
+    
+    vertical-align: text-top;
+    margin-top: -4px;
+    margin-right: 10px;
+    
+    transition: margin 0.3s;
+    
+    font-size: 35px;
+    line-height: 1;
+    color: #EB4D4D;
+}
+
+.box {
+    display: flex;
+    position: relative;
+
+    width: 100%;
+    height: 50%;
+    top: 6%;
+    left: -10%;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 30px 60px #ffffff20;
+}
+
+.box .percent {
+    position: relative;
+    
+    width: 150px;
+    height: 150px;
+
+    transform: rotate(90deg);
+}
+
+.box .percent svg {
+    position: relative;
+    
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent svg circle {
+    width: 150px;
+    height: 150px;
+    
+    stroke: #EB4D4D;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+    stroke-width: 10;
+    
+    fill: none;
+    transform: translate(5px, 5px);
+    transition: 0.8s ease;
+}
+
+.box .percent svg circle:nth-child(1) {stroke-dashoffset: 0; stroke: #cacaca;}
+.box .percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 1) / 100);
+    stroke: #EB4D4D;
+}
+
+.box .percent .number {
+    display: flex;
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+}
+
+.box .percent .number input {
+    font-size: 48px;
+    width: 54px;
+
+    float: right;
+
+    color: #EB4D4D;
+}
+
+.box1 {
+    position: absolute;
+
+    top: 49%;
+    width: 100%;
+
+    text-align: center;
+}
+
+#multiplier, #win-chance, #balance {
+    letter-spacing: 2px;
+    font-size: 19px;
+}
+
+#balance {
+    left: 30%;
+    color: #EB4D4D;
+    text-transform: uppercase;
+    padding-right: 10px;
+    position: absolute;
+}
+
+#multiplier {left: 51%;}
+#win-chance {left: 60%;}
+#multiplier, #win-chance {
+    padding: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    border-radius: 5px;
+
+    color: #fff;
+    background-color: #EB4D4D;
+}
+
+.data {
+    position: relative;
+    left: 52%;
+    text-align: left;
+}
+
+.btn-money {
+    position: absolute;
+
+    top: 0;
+    right: 5px;
+    padding: 5px;
+}
+
+.btn-money i {margin: 0;}

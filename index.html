@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Casino</title>
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <div class="box1">
+            <label id="balance"><span>balance: $</span>2323</label>
+            <div class="data">
+                <label id="multiplier">2</label>
+                <label id="win-chance">20%</label>
+            </div>
+        </div>
+        <div class="box">
+            <div class="percent">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70" class="a"></circle>
+                </svg>
+                <div class="number">
+                    <input class='inp-value' type="text" maxlength="2" value="50"></input>
+                </div>
+            </div>
+        </div>
+        <button class="btn-rll-over"><i class="ion-ios-arrow-up"></i>Roll Over</button>
+        <button class="btn-rll-under"><i class="ion-ios-arrow-down"></i>Roll Under</button>
+        <input class="input-bet" type="number" placeholder="AMMOUNT"></input>
+        <button class="btn-bet">bet</button>
+        <button class="btn-money"><i class="ion-ios-plus-outline"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
