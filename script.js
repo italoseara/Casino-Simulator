@@ -29,7 +29,7 @@ document.querySelector('#under-over').addEventListener('click', function () {
     underOver === -1 ? thisValue.innerHTML = '<i class="ion-ios-arrow-up"></i> Over' : thisValue.innerHTML = '<i class="ion-ios-arrow-down"></i> Under';
 })
 document.querySelector('.btn-bet').addEventListener('click', function () {
-    if (!isNaN(bet)) {
+    if (!isNaN(bet) && bet <= balance && bet > 0) {
         var balance_selector = document.querySelector('#balance');
         balance -= bet;
         var roll = Math.floor(Math.random() * 100)
