@@ -12,13 +12,6 @@
 
 <body>
     <div class="wrapper clearfix">
-        <div class="box1">
-            <label id="balance"><span>balance: $</span>2323</label>
-            <div class="data">
-                <label id="multiplier">2</label>
-                <label id="win-chance">20%</label>
-            </div>
-        </div>
         <div class="box">
             <div class="percent">
                 <svg>
@@ -30,10 +23,32 @@
                 </div>
             </div>
         </div>
-        <button class="btn-rll-over"><i class="ion-ios-arrow-up"></i>Roll Over</button>
-        <button class="btn-rll-under"><i class="ion-ios-arrow-down"></i>Roll Under</button>
-        <input class="input-bet" type="number" placeholder="AMMOUNT"></input>
+        <label id="balance-text">Balance</label>
+        <input type="text" readonly id="balance" value="0"></input>
+
+        <label id="bet-text">bet</label>
+        <input id="bet" type="number" placeholder="AMMOUNT"></input>
+
+        <label id="profit-text">Profit</label>
+        <input type="text" readonly id="profit" value="0"></input>
+
+        <label id="multiplier-text">Multiplier</label>
+        <label id="chance-text">Chance</label>
+        <div class="blw">
+            <input type="text" readonly id="multiplier" value="0"></input>
+            <input type="text" readonly id="chance" value="0"></input>
+            <button type="text" readonly id="under-over" unselectable="on"><i class="ion-ios-arrow-down"></i> Under</button>
+        </div>
+
+        <div class="multiply-bet">
+            <button id="min">Min</button>
+            <button id="half">0.5x</button>
+            <button id="double">2x</button>
+            <button id="max">max</button>
+        </div>
+
         <button class="btn-bet">bet</button>
+
         <button class="btn-money"><i class="ion-ios-plus-outline"></i></button>
     </div>
 

@@ -5,48 +5,6 @@
     
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-input, button {
-    border: none;
-    background: none;
-    text-align: center; 
-}
-
-input:focus, button:focus {
-    outline: none;
-}
-
-.input-bet:hover { border: 1px solid lightskyblue; }
-.input-bet:focus { border: 1px solid black; }
-.input-bet::placeholder { font-family: Lato; font-size: 18px;}
-.input-bet {
-    position: absolute;
-    outline: none;
-
-    width: 25%;
-    height: 5%;
-
-    left: 42.3%;
-    top: 56%;
-    padding-left: 10px;
-    border-radius: 5px;
-
-    text-align: center;
-    font-size: 18px;
-    font-family: Lato;
-    background: white;
-    color: #555;
-    border: 1px solid #555;
-    transform: translateX(-50%);
-}
-
-button {cursor: pointer;}
-
 body {
     background-image: linear-gradient(#3e141466, #3e141466), url(back.jpg);
     background-size: cover;
@@ -58,6 +16,24 @@ body {
     color: #555;
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input, button {
+    border: none;
+    background: none;
+    text-align: center;
+}
+
+button {cursor: pointer;}
+
+input:focus, button:focus {
+    outline: none;
+}
+
 .wrapper {
     width: 1000px;
     height: 600px;
@@ -65,77 +41,127 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #dfdfdf;
+    background-color: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
 
-.btn-rll-under, .btn-rll-over, .btn-bet{
+#bet:focus, #profit:focus, #balance:focus, #multiplier:focus #chance:focus, #under-over:focus {
+    border: 1px solid #EB4D4D; }
+
+#bet, #balance, #profit, #multiplier, #chance, #under-over{
     position: absolute;
-    
-    width: 200px;
-    right: 21%;
-    
-    transform: translateX(-50%);
-    transition: background-color 0.3s, color 0.3s;
+    outline: none;
+
+    width: 20%;
+    height: 5%;
+
+    border-radius: 2px;
     
     font-family: Lato;
-    font-weight: 300;
-    font-size: 23px;
-    text-transform: uppercase;
-    text-align: left;
-    color: #555;
-}
-
-.btn-rll-under:hover, .btn-rll-over:hover { font-weight: 600; }
-.btn-rll-under:hover i, .btn-rll-over:hover i { margin-right: 15px; }
-
-.btn-rll-under {top: 36%;}
-.btn-rll-over {top: 22%;}
-
-.btn-bet  {
-    width: 10%;
-    top: 56%;
-    left: 60.5%;
-    
-    padding-top: 3px;
-    padding-bottom: 3px;
-
-    border-radius: 5px;
-
-    font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     letter-spacing: 2px;
-    color: #fff;
-    background-color: #EB4D4D;
-    transition: 0.3s ease;
+
+    color: #555;
+    background: #f1f1f1;
+    border: 1px solid #555;
+    transform: translateX(-50%);
 }
 
-.btn-bet:hover {letter-spacing: 5px; padding-left: 3px;}
+#balance-text, #bet-text, #profit-text, #multiplier-text, #chance-text {
+    position: absolute;
+
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #EB4D4D;
+}
+
+#bet {padding-left: 15px; left: 33%; top: 47%;}
+#bet::placeholder { font-family: Lato; font-size: 18px;}
+#bet-text {top: 43.5%; left: 23%;}
+
+#balance {top: 37%; left: 33%;}
+#balance-text {top: 33.5%; left: 23%;}
+
+#profit {top: 37%; left: 55%;}
+#profit-text {top: 33.5%; left: 45%;}
+
+.blw {
+    position: absolute;
+
+    width: 42%;
+    height: 5%;
+
+    left: 29.39%;
+    top: 57%;
+}
+
+#multiplier, #chance, #under-over {position: relative; height: 100%; width: 30%;}
+#multiplier, #chance {margin-right: 4.2%;}
+#under-over {top: -1.8px;}
+
+#multiplier-text {left: 23%; top: 53.5%;}
+#chance-text {left: 37.7%; top: 53.5%;}
+
+.multiply-bet {
+    position: absolute;
+
+    height: 5%;
+    width: 30%;
+    top: 47%;
+    left: 45%;
+}
+
+#min, #max, #double, #half, .btn-bet{
+    background-color: #EB4D4D;
+
+    height: 100%;
+
+    font-family: Lato;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    color: #fff;
+    padding-right: 6.4px;
+    padding-left: 6.4px;
+}
+
+.btn-bet {
+    position: absolute;
+
+    width: 42%;
+    height: 6%;
+
+    left: 23%;
+    top: 65.5%;
+
+    border-radius: 5px;
+    padding-left: 20px;
+    letter-spacing: 10px;
+    font-size: 20px;
+}
 
 i {
-    display: inline-block;
-    
     vertical-align: text-top;
-    margin-top: -4px;
-    margin-right: 10px;
     
-    transition: margin 0.3s;
-    
-    font-size: 35px;
+    font-size: 25px;
     line-height: 1;
     color: #EB4D4D;
 }
 
 .box {
     display: flex;
-    position: relative;
+    position: absolute;
 
     width: 100%;
-    height: 50%;
-    top: 6%;
-    left: -10%;
+    height: 100%;
+    left: 27%;
 
     justify-content: center;
     align-items: center;
@@ -204,47 +230,6 @@ i {
     color: #EB4D4D;
 }
 
-.box1 {
-    position: absolute;
-
-    top: 49%;
-    width: 100%;
-
-    text-align: center;
-}
-
-#multiplier, #win-chance, #balance {
-    letter-spacing: 2px;
-    font-size: 19px;
-}
-
-#balance {
-    left: 30%;
-    color: #EB4D4D;
-    text-transform: uppercase;
-    padding-right: 10px;
-    position: absolute;
-}
-
-#multiplier {left: 51%;}
-#win-chance {left: 60%;}
-#multiplier, #win-chance {
-    padding: 1px;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    border-radius: 5px;
-
-    color: #fff;
-    background-color: #EB4D4D;
-}
-
-.data {
-    position: relative;
-    left: 52%;
-    text-align: left;
-}
-
 .btn-money {
     position: absolute;
 
@@ -252,5 +237,4 @@ i {
     right: 5px;
     padding: 5px;
 }
-
-.btn-money i {margin: 0;}
+.btn-money i {margin: 0; font-size: 38px;}
