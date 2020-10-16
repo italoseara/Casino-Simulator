@@ -46,7 +46,7 @@ input:focus, button:focus {
     overflow: hidden;
 }
 
-#bet:focus, #profit:focus, #balance:focus, #multiplier:focus #chance:focus, #under-over:focus {
+#bet:focus, #profit:focus, #balance:focus, #under-over:focus {
     border: 1px solid #EB4D4D; }
 
 #bet, #balance, #profit, #multiplier, #chance, #under-over, #last {
@@ -105,6 +105,7 @@ input:focus, button:focus {
 #multiplier, #chance, #under-over {position: relative; height: 100%; width: 30%;}
 #multiplier, #chance {margin-right: 4.2%;}
 #under-over {top: -1.8px;}
+#multiplier:focus, #chance:focus {border: 1px solid #EB4D4D;}
 
 #multiplier-text {left: 23%; top: 53.5%;}
 #chance-text {left: 37.7%; top: 53.5%;}
