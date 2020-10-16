@@ -31,21 +31,27 @@ document.querySelector('#under-over').addEventListener('click', function () {
 document.querySelector('.btn-bet').addEventListener('click', function () {
     if (!isNaN(bet) && bet <= balance && bet > 0 && winChance > 0) {
         var balance_selector = document.querySelector('#balance');
+        var last_selector = document.querySelector('#last');
         balance -= bet;
         var roll = Math.floor(Math.random() * 100)
-        //console.log(roll);
+        last_selector.value = roll;
         if (roll > value && underOver === -1) {
             balance += profit + bet;
             balance_selector.style.color = '#05d405';
+            last_selector.style.color = '#05d405';
 
         } else if (roll < value && underOver === 1) {
             balance += profit + bet;
             balance_selector.style.color = '#05d405';
+            last_selector.style.color = '#05d405';
         } else {
             balance_selector.style.color = 'red';
+            last_selector.style.color = 'red';
         }
         balance_selector.style.fontWeight = 600;
+        last_selector.style.fontWeight = 600;
         setTimeout(() => { balance_selector.style.color = '#555'; balance_selector.style.fontWeight = 300; }, 400);
+        setTimeout(() => { last_selector.style.color = '#555'; last_selector.style.fontWeight = 300; }, 400);
     }
 });
 
