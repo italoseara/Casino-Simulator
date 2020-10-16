@@ -14,6 +14,7 @@ function update() {
     document.querySelector('#chance').value = winChance + '%';
     document.querySelector('#profit').value = profit.toFixed(2);
     document.querySelector('#balance').value = balance.toFixed(2);
+    balance = parseFloat(document.querySelector('#balance').value).toFixed(2);
 };
 
 bet_selector = document.querySelector('#bet')
