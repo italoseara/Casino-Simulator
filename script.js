@@ -8,7 +8,7 @@ function update() {
     multiplier = (1 / (winChance / 100)).toFixed(2); if (value == 0) multiplier = 0;
     bet = parseFloat(bet_selector.value);
     profit = (bet * multiplier) - bet; if (isNaN(profit)) profit = 0;
-    balance = balance.toFixed(2);
+    balance = parseFloat(balance).toFixed(2);
 
     document.querySelector('.a').style.strokeDashoffset = 'calc(440 - (440 * ' + winChance * underOver + ') / 100)';
     document.querySelector('#multiplier').value = multiplier + 'x';
