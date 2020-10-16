@@ -8,13 +8,12 @@ function update() {
     multiplier = (1 / (winChance / 100)).toFixed(2); if (value == 0) multiplier = 0;
     bet = parseFloat(bet_selector.value);
     profit = (bet * multiplier) - bet; if (isNaN(profit)) profit = 0;
-    balance = parseFloat(balance).toFixed(2);
 
     document.querySelector('.a').style.strokeDashoffset = 'calc(440 - (440 * ' + winChance * underOver + ') / 100)';
     document.querySelector('#multiplier').value = multiplier + 'x';
     document.querySelector('#chance').value = winChance + '%';
     document.querySelector('#profit').value = profit.toFixed(2);
-    document.querySelector('#balance').value = balance;
+    document.querySelector('#balance').value = balance.toFixed(2);
 };
 
 bet_selector = document.querySelector('#bet')
@@ -30,7 +29,7 @@ document.querySelector('#under-over').addEventListener('click', function () {
     underOver === -1 ? thisValue.innerHTML = '<i class="ion-ios-arrow-up"></i> Over' : thisValue.innerHTML = '<i class="ion-ios-arrow-down"></i> Under';
 })
 document.querySelector('.btn-bet').addEventListener('click', function () {
-    if (!isNaN(bet) && bet <= balance && bet > 0) {
+    if (!isNaN(bet) && bet <= balance && bet > 0 && winChance > 0) {
         var balance_selector = document.querySelector('#balance');
         balance -= bet;
         var roll = Math.floor(Math.random() * 100)
